@@ -15,20 +15,22 @@
 ### Thread function in C
 ~~~c
 pthread_create( pthread_t *th_id, const pthread_attr_t *attr, void* func, void *arg )
-
-th_id: 생성된 Thread ID가 저장될 포인터.
+~~~
+-th_id: 생성된 Thread ID가 저장될 포인터.
 -attr: Attribute of the Thread. Point ton pthread_attr_t structure. If Null, default.
 -The code sequence of the new thread is executed by invoking <u>func</u>
 -On success, it returns 0;
 
-
+~~~c
 int pthread_join(pthread_t thread, void **retval);
+~~~
 -thread : The function wait for thread to terminate. 
 -retval : If retval is not NULL, the exit status of thread is copied into <u>retval</u>
-
-noreturn void pthread_exit(void *retval);
--The function terminates the calling thread and returns values to retval 
+~~~c
+no return void pthread_exit(void *retval);
 ~~~
+-The function terminates the calling thread and returns values to retval 
+
 ## Socket 
 ### Socket?
 -네트워크상 통신하는 프로그램의 종착점(endpoint). Socket을 열기 위해서 IP, Port, Protocol이 필요하다. 
