@@ -1,9 +1,9 @@
 # 2021/07/01: Simple File Sharing System
 ---
 - 첫 날이었는데, 네트워크나 소켓 개념이 생소했는데 바로 Q1, Q2를 시간 내에 하느라 처음엔 적응하기 힘들었다. 집에 와서 예제를 보면서 공부하니 어렴풋 개념이 잡혀가는 것 같다. 
-1 멀티스레드를 이용한 server-client echo 프로그램
-1 Client가 요청한 텍스트 파일의 데이터를 client로 보내주는 프로그램
-1 Server의 실행파일에서 Command Line Argument로 port번호와 directory를 입력받고, Client 실행파일의 Argument로 ip:port와 명령어을 받는다.
+1. 멀티스레드를 이용한 server-client echo 프로그램
+2. Client가 요청한 텍스트 파일의 데이터를 client로 보내주는 프로그램
+3. Server의 실행파일에서 Command Line Argument로 port번호와 directory를 입력받고, Client 실행파일의 Argument로 ip:port와 명령어을 받는다.
 
 ---
 ## Thread in C
