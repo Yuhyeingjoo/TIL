@@ -8,8 +8,16 @@
 - 한 프로세스는 여러 스레드로 구성되어 있고, 스레드들은 context switching하며 동시성을 지닌다. 
 ### Thread function in C
 ~~~c
-pthread_create( pthread_t *th_id, const pthread_attr_t *attr, void* 함수명, void *arg );
+pthread_create( pthread_t *th_id, const pthread_attr_t *attr, void* func, void *arg )
+//th_id: 생성된 Thread ID가 저장될 포이넡. 
+//attr: Attribute of the Thread. Point ton pthread_attr_t structure. If Null, default.
+//The code sequence of the new thread is executed by invoking <u>func</u>
+//On success, it returns 0;
 
+int pthread_join(pthread_t thread, void **retval);
+//thread : The function wait for <u>thread</u> to terminate. 
+//retval : If <u>retval</u> is not NULL, the exit status of <u>thread</u> is copied into <u>retval</u>
 
-
+noreturn void pthread_exit(void *retval);
+//The function terminates the calling thread and returns values to retval 
 ~~~
