@@ -3,7 +3,7 @@
 * 멀티스레드를 이용한 server-client echo 프로그램
 * Client가 요청한 텍스트 파일의 데이터를 client로 보내주는 프로그램
 * Server의 실행파일에서 Command Line Argument로 port번호와 directory를 입력받고, Client 실행파일의 Argument로 ip:port와 명령어을 받는다.
-* 
+
 ---
 ## Thread in C
 ### Thread?
