@@ -1,6 +1,7 @@
 # 2021/07/01: Simple File Sharing System
 ---
-
+* 멀티스레드를 이용한 server-client echo 프로그램
+* Client가 요청한 텍스트 파일의 데이타를 client로 보내주는 프로그램
 ---
 ## Thread in C
 ### Thread?
@@ -19,8 +20,8 @@ th_id: 생성된 Thread ID가 저장될 포인터.
 
 
 int pthread_join(pthread_t thread, void **retval);
--thread : The function wait for <u>thread</u> to terminate. 
--retval : If <u>retval</u> is not NULL, the exit status of <u>thread</u> is copied into <u>retval</u>
+-thread : The function wait for thread to terminate. 
+-retval : If retval is not NULL, the exit status of thread is copied into <u>retval</u>
 
 noreturn void pthread_exit(void *retval);
 -The function terminates the calling thread and returns values to retval 
@@ -35,11 +36,12 @@ int socket(int domain, int type, int protocol);
 -On success, it returns the file descriptor.
 
 int listen(int sockfd, int backlog);
--waiting for any client connection on socket specified by <u>sockfd</u>
+-waiting for any client connection on socket specified by sockfd
 -backlog is the size of waiting queue
 
  int accept(int sockfd, struct sockaddr *restrict addr, socklen_t *restrict addrlen);
- - It receives connections on the waiting queue, creates a new socket for that connection and returns a file descriptor reffering to that socket.
+ - It receives connections on the waiting queue, creates a new socket for that connection 
+ and returns a file descriptor reffering to that socket.
  
  ~~~
  
