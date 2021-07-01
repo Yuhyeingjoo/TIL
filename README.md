@@ -48,7 +48,7 @@ int listen(int sockfd, int backlog);
 ~~~c
  int accept(int sockfd, struct sockaddr *restrict addr, socklen_t *restrict addrlen);
  ~~~
- - It receives connections on the waiting queue, creates a new socket for that connection 
+-It receives connections on the waiting queue, creates a new socket for that connection 
  and returns a file descriptor reffering to that socket.
  
 
