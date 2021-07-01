@@ -37,18 +37,21 @@ no return void pthread_exit(void *retval);
 데이터가 오고 가는 창구.
 ~~~c
 int socket(int domain, int type, int protocol);
+~~~
 -domain : It specifies the protocol family which will be used for commucacation.
 -On success, it returns the file descriptor.
-
+~~~c
 int listen(int sockfd, int backlog);
+~~~
 -waiting for any client connection on socket specified by sockfd
 -backlog is the size of waiting queue
-
+~~~c
  int accept(int sockfd, struct sockaddr *restrict addr, socklen_t *restrict addrlen);
+ ~~~
  - It receives connections on the waiting queue, creates a new socket for that connection 
  and returns a file descriptor reffering to that socket.
  
- ~~~
+
  
  
  
