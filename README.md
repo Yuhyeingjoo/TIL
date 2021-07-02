@@ -16,15 +16,15 @@
 ~~~c
 pthread_create( pthread_t *th_id, const pthread_attr_t *attr, void* func, void *arg )
 ~~~
--th_id: 생성된 Thread ID가 저장될 포인터.
--attr: Attribute of the Thread. Point ton pthread_attr_t structure. If Null, default.
--The code sequence of the new thread is executed by invoking <u>func</u>
+-th_id: 생성된 Thread ID가 저장될 포인터.  
+-attr: Attribute of the Thread. Point ton pthread_attr_t structure. If Null, default.  
+-The code sequence of the new thread is executed by invoking func  
 -On success, it returns 0;
 
 ~~~c
 int pthread_join(pthread_t thread, void **retval);
 ~~~
--thread : The function wait for thread to terminate. 
+-thread : The function wait for thread to terminate.   
 -retval : If retval is not NULL, the exit status of thread is copied into <u>retval</u>
 ~~~c
 no return void pthread_exit(void *retval);
@@ -38,12 +38,12 @@ no return void pthread_exit(void *retval);
 ~~~c
 int socket(int domain, int type, int protocol);
 ~~~
--domain : It specifies the protocol family which will be used for commucacation.
+-domain : It specifies the protocol family which will be used for commucacation.  
 -On success, it returns the file descriptor.
 ~~~c
 int listen(int sockfd, int backlog);
 ~~~
--waiting for any client connection on socket specified by sockfd
+-waiting for any client connection on socket specified by sockfd  
 -backlog is the size of waiting queue
 ~~~c
  int accept(int sockfd, struct sockaddr *restrict addr, socklen_t *restrict addrlen);
