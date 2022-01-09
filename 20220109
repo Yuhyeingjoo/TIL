@@ -2,7 +2,7 @@
 - Buffer overflows
 > Many programs have built-in maximum lengths for inputs and input elements and it is easy to excess these length.
 
-~~~c
+~~~ c
 char weekday[9]; 
 strcpy (weekday, input);
 ~~~
@@ -12,7 +12,7 @@ strcpy (weekday, input);
 
 파이썬에서도 쉽게 찾을 수 있다. 
 
-~~~python
+~~~ python
 def crash_if_too_long(s):
     buffer = "Thursday"
     if len(s) > len(buffer):
