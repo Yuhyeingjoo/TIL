@@ -1,3 +1,26 @@
 # Many kinds of bugs being made today
 - Buffer overflows
-> 
+> Many programs have built-in maximum lengths for inputs and input elements and it is easy to excess these length.
+
+~~~c
+char weekday[9]; 
+strcpy (weekday, input);
+~~~
+> simply it is a buffer overflows
+
+---
+
+파이썬에서도 쉽게 찾을 수 있다. 
+
+~~~python
+def crash_if_too_long(s):
+    buffer = "Thursday"
+    if len(s) > len(buffer):
+        raise ValueError
+        
+trials = 100
+with ExpectError():
+    for i in range(trials):
+        s = fuzzer()
+        crash_if_too_long(s)
+~~~
